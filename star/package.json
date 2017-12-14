@@ -10,13 +10,17 @@
     "install-node": "6.11.1"
   },
   "dependencies": {
+    "ant-design-pro": "^0.3.0",
     "antd": "^3.0.1",
     "babel-plugin-import": "^1.6.3",
     "babel-runtime": "^6.9.2",
     "dva": "^2.1.0",
+    "moment": "^2.19.4",
+    "numeral": "^2.0.6",
     "react": "^15.4.0",
     "react-container-query": "^0.9.1",
-    "react-dom": "^15.4.0"
+    "react-dom": "^15.4.0",
+    "react-fittext": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",

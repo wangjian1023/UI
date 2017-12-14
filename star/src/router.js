@@ -1,5 +1,6 @@
 import React from 'react';
 import { Router, Route, Switch } from 'dva/router';
+import 'antd/dist/antd.less';
 import BasicLayout from './Layouts/BasicLayout';
 
 function RouterConfig({ history }) {
