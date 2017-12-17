@@ -1,4 +1,4 @@
-import { Layout, Input, Avatar, Dropdown, Icon, Menu, Carousel } from 'antd';
+import { Layout, Input, Avatar, Dropdown, Menu, Carousel } from 'antd';
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import HeaderSearch from 'ant-design-pro/lib/HeaderSearch';
@@ -13,13 +13,13 @@ const Search = Input.Search;
 const menu = (
   <Menu>
     <Menu.Item key="0">
-      <a href="http://www.alipay.com/">1st menu item</a>
+      <a href="http://www.alipay.com/">注册</a>
     </Menu.Item>
     <Menu.Item key="1">
-      <a href="http://www.taobao.com/">2nd menu item</a>
+      <a href="http://www.taobao.com/">写游记</a>
     </Menu.Item>
     <Menu.Divider />
-    <Menu.Item key="3">3rd menu item</Menu.Item>
+    <Menu.Item key="3">退出</Menu.Item>
   </Menu>
 );
 
@@ -90,12 +90,27 @@ class BasicLayout extends React.Component {
           </div>
         </Header>
         <Content style={{ background: '#F5F5F5', minHeight: 900, height: '700px', width: '100%' }}>
-          <Carousel autoplay>
-            <div><h3>1</h3></div>
-            <div><h3>2</h3></div>
-            <div><h3>3</h3></div>
-            <div><h3>4</h3></div>
+          <Carousel autoplay className={styles.pic}>
+            <div><img src="http://m.chanyouji.cn/index-cover/45546-1628868.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
+            <div><img data-src="http://m.chanyouji.cn/index-cover/27926-894425.jpg" src="http://m.chanyouji.cn/index-cover/27926-894425.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
+            <div><img data-src="http://m.chanyouji.cn/index-cover/331-13837.jpg" src="http://m.chanyouji.cn/index-cover/331-13837.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
+            <div><img data-src="http://m.chanyouji.cn/index-cover/497-21905.jpg" src="http://m.chanyouji.cn/index-cover/497-21905.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
+            <div><img data-src="http://m.chanyouji.cn/index-cover/64695-2679221.jpg" src="http://m.chanyouji.cn/index-cover/64695-2679221.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
           </Carousel>
+          <div style={{ display: 'flex', flexDirection: 'column' }}className={styles.word}>
+            <div>
+              <h1 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C8C8C8', fontSize: '40px' }}>
+                蝉游记
+              </h1>
+              <h1 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C8C8C8', fontSize: '30px' }}>CHANYOUJI.COM</h1>
+            </div>
+          </div>
+
+          <div className={styles.border}>
+            <a><h1>发现好游记</h1></a>
+            <a><h1>旅行口袋说</h1></a>
+            <a><h1>我要写游记</h1></a>
+          </div>
         </Content>
         <Footer className={this.Footer} style={{ background: 'black', height: '50px' }}>
           3
