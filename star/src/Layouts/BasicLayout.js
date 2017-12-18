@@ -1,4 +1,4 @@
-import { Layout, Input, Avatar, Dropdown, Menu, Carousel } from 'antd';
+import { Layout, Input, Avatar, Dropdown, Menu, Carousel, Icon} from 'antd';
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import HeaderSearch from 'ant-design-pro/lib/HeaderSearch';
@@ -9,7 +9,8 @@ import styles from './BasicLayout.less';
 
 const { Header, Footer, Content } = Layout;
 const Search = Input.Search;
-// const { SubMenu } = Menu;
+// const SubMenu = Menu.SubMenu;
+// const MenuItemGroup = Menu.ItemGroup;
 const menu = (
   <Menu>
     <Menu.Item key="0">
@@ -46,6 +47,15 @@ const query = {
 };
 
 class BasicLayout extends React.Component {
+  state = {
+    current: 'mail',
+  }
+  handleClick = (e) => {
+    console.log('click ', e);
+    this.setState({
+      current: e.key,
+    });
+  }
   render() {
     const layout = (
       <Layout>
@@ -89,31 +99,65 @@ class BasicLayout extends React.Component {
             </Dropdown>
           </div>
         </Header>
-        <Content style={{ background: '#F5F5F5', minHeight: 900, height: '700px', width: '100%' }}>
+        <Content style={{ background: '#F5F5F5', minHeight: 1200, height: '1200px', width: '100%' }}>
           <Carousel autoplay className={styles.pic}>
             <div><img src="http://m.chanyouji.cn/index-cover/45546-1628868.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
-            <div><img data-src="http://m.chanyouji.cn/index-cover/27926-894425.jpg" src="http://m.chanyouji.cn/index-cover/27926-894425.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
-            <div><img data-src="http://m.chanyouji.cn/index-cover/331-13837.jpg" src="http://m.chanyouji.cn/index-cover/331-13837.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
-            <div><img data-src="http://m.chanyouji.cn/index-cover/497-21905.jpg" src="http://m.chanyouji.cn/index-cover/497-21905.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
-            <div><img data-src="http://m.chanyouji.cn/index-cover/64695-2679221.jpg" src="http://m.chanyouji.cn/index-cover/64695-2679221.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
+            <div><img src="http://m.chanyouji.cn/index-cover/27926-894425.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
+            <div><img src="http://m.chanyouji.cn/index-cover/331-13837.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
+            <div><img src="http://m.chanyouji.cn/index-cover/497-21905.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
+            <div><img src="http://m.chanyouji.cn/index-cover/64695-2679221.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
           </Carousel>
           <div style={{ display: 'flex', flexDirection: 'column' }}className={styles.word}>
             <div>
               <h1 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C8C8C8', fontSize: '40px' }}>
                 蝉游记
               </h1>
-              <h1 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C8C8C8', fontSize: '30px' }}>CHANYOUJI.COM</h1>
+              <h1 className={styles.h1}>CHANYOUJI.COM</h1>
             </div>
           </div>
-
-          <div className={styles.border}>
-            <a><h1>发现好游记</h1></a>
-            <a><h1>旅行口袋说</h1></a>
-            <a><h1>我要写游记</h1></a>
-          </div>
+          <Menu
+            onClick={this.handleClick}
+            selectedKeys={[this.state.current]}
+            mode="horizontal"
+            className={styles.middle}
+          >
+            <span className={styles.sep}>1</span>
+            <Menu.Item key="mail" className={styles.text}>
+              <Icon />发现好游记
+            </Menu.Item>
+            <span className={styles.sep}>1</span>
+            <Menu.Item key="app" className={styles.text}>
+              <Icon />旅行口袋书
+            </Menu.Item>
+            <span className={styles.sep} >1</span>
+            <Menu.Item key="alipay" className={styles.text}>
+              <a href="https://ant.design" rel="noopener noreferrer">我爱写游记</a>
+            </Menu.Item>
+            <span className={styles.sep} >1</span>
+          </Menu>
+          {/* <div className={styles.middle}>
+            <h3 className={styles.text}>发现好游记</h3>
+            <span className={styles.sep}>1</span>
+            <h3 className={styles.text}>旅行口袋书</h3>
+            <span className={styles.sep}>1</span>
+            <h3 className={styles.text}>我要写游记</h3>
+          </div> */}
         </Content>
-        <Footer className={this.Footer} style={{ background: 'black', height: '50px' }}>
-          3
+        <Footer style={{ background: 'white', height: '100px' }}>
+          <div className={styles.layout}>
+            <h1>手机应用</h1>
+            <h1 >|</h1>
+            <h1 >口袋攻略</h1>
+            <h1 >|</h1>
+            <h1>意见反馈</h1>
+            <h1>|</h1>
+            <h1>联系我们</h1>
+            <h1>|</h1>
+            <h1 style={{ paddingRight: '350px' }}>使用条款</h1>
+          </div>
+          <div>
+            <h2 className={styles.h2}>蝉游记  沪ICP备1号文案</h2>
+          </div>
         </Footer>
       </Layout>
 

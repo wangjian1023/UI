@@ -53,7 +53,6 @@
     vertical-align: middle;
     font-size: 20px;
     padding: 0px 0px 0px 15px;
-    // margin-left: 15px;
     font-weight: 500;
 
   }
@@ -82,7 +81,6 @@
   width: 220px;
   height: 120px;
   position: absolute;
-  display:flex;
   justify-content: center;
   align-items: center;
   left: 50%;
@@ -90,9 +88,7 @@
   margin: 0 0 0 -103px;
   z-index: 5;
   padding-bottom: 40px;
-  // border-bottom: 1px solid black;
-  // background-color: #B0B0B0;
-  .h1 {
+  h1 {
     font-size: 40px;
     display: flex;
     align-items: center;
@@ -102,44 +98,58 @@
     margin-top: 30px;
   }
 }
-.border {
+
+           //中部样式页面内按钮跳转样式
+.middle {
+  // background: url("http://m.chanyouji.cn/index-cover/497-21905.jpg");
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  height: 100px;
+  justify-content: center;
   width: 100%;
+  align-items: center;
   text-align: center;
-  background-color: #C8C8C8;
-  font: 12px/1.5 Tahoma,Helvetica,"Hiragino Sans GB",sans-serif;
-  border-bottom: 1px solid gray;
-  .text {
-    display: inline-block;
-    text-align: center;
-    width: 200px;
-    height: 88px;
-    font-size: 50px;
-    line-height: 88px;
-    vertical-align: middle;
-    justify-content: space-around;
+  vertical-align: middle;
+  height: 90px;
+  background-color: #fff;
+  border-bottom: 0.01px solid gray;
+}
+.text {
+  display: inline-block;
+  width: 200px;
+  height: 88px;
+  line-height: 88px;
+  font-size: 22px;
+  vertical-align: middle;
+  color: black;
+}
+.sep {
+  display: inline-block;
+  height: 25px;
+  width: 1px;
+  overflow: hidden;
+  background: grey;
+  vertical-align: middle;
+}
+
+                       //首页底部样式
+.layout {
+  display: flex;
+  justify-content: space-around;
+  font-size: 16px;
+  align-items: center;
+  line-height: 50px;
+  width: 990px;
+  float: left;
+  margin: 0 auto;
+  h1 {
+    font-size: 16px;
   }
-  .a {
-    display: inline-block;
-    width: 200px;
-    height: 88px;
-    line-height: 88px;
-    font-size: 22px;
-    color: rgb(17, 13, 13);
-    text-decoration: none;
-    outline: none;
-  
-  }
-  .sep {
-    display: inline-block;
-    height: 24px;
-    width: 1px;
-    overflow: hidden;
-    background: #EAEAEA;
-    vertical-align: middle;
-  }
+}
+.h2 {
+  display: flex;
+  padding-top: 10px;
+  justify-content: center;
+  float: right;
+  font-size: 16px;
+  margin: 0 auto;
 }
