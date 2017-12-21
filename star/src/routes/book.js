@@ -1,4 +1,4 @@
-import { Layout, Button } from 'antd';
+import { Layout, Button, Card, Avatar } from 'antd';
 import React from 'react';
 import { connect } from 'dva';
 import { ContainerQuery } from 'react-container-query';
@@ -25,20 +25,34 @@ const query = {
     minWidth: 1200,
   },
 };
+const { Meta } = Card;
+
 
 class BasicLayout extends React.Component {
   render() {
     const layout = (
-      <Layout className={styles.contents}>
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-          <Button className={styles.filter} type="primary">精选游记</Button>
-          <Button className={styles.filter}>精选游记</Button>
-          <Button className={styles.filter}>国外-其他</Button>
-          <Button className={styles.filter}>国外-港澳台</Button>
-          <Button className={styles.filter}>国外-大陆</Button>
-        </div>
-      </Layout>
-
+      <div>
+        <Layout className={styles.contents}>
+          <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+            <Button className={styles.filter} type="primary">精选游记</Button>
+            <Button className={styles.filter}>精选游记</Button>
+            <Button className={styles.filter}>国外-其他</Button>
+            <Button className={styles.filter}>国外-港澳台</Button>
+            <Button className={styles.filter}>国外-大陆</Button>
+          </div>
+        </Layout>
+        <Card
+          style={{ width: 300 }}
+          cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
+          // actions={[<Icon type="setting" />, <Icon type="edit" />, <Icon type="ellipsis" />]}
+        >
+          <Meta
+            avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+            title="Card title"
+            description="This is the description"
+          />
+        </Card>
+      </div>
     );
 
     return (
