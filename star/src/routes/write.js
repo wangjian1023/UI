@@ -1,4 +1,4 @@
-import { Layout, Menu } from 'antd';
+import { Layout } from 'antd';
 import React from 'react';
 // import { Link } from 'react-router-dom';
 // import HeaderSearch from 'ant-design-pro/lib/HeaderSearch';
@@ -87,7 +87,8 @@ class Write extends React.Component {
           </div>
         </Header> */}
         <Content style={{ background: '#F5F5F5', minHeight: 1200, height: '1200px', width: '100%' }}>
-        1
+          <h1>给游记起个名字</h1>
+          
         </Content>
       </Layout>
 

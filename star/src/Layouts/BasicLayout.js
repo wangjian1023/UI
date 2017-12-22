@@ -13,8 +13,7 @@ import Write from '../routes/write';
 
 const { Header, Footer, Content } = Layout;
 const Search = Input.Search;
-const { Meta } = Card;
-// const SubMenu = Menu.SubMenu;
+// -// const SubMenu = Menu.SubMenu;
 // const MenuItemGroup = Menu.ItemGroup;
 const menu = (
   <Menu>
@@ -159,10 +158,9 @@ class BasicLayout extends React.Component {
               <Switch>
                 <Route path="/book" component={book} />
                 <Route path="/view" component={view} />
-                {/* <Route path="/3" component={write} /> */}
               </Switch>
             </div>
-            <div>
+            {/* <div>
               <Row gutter={16}>
                 <Col span={3}>
                   <div>same</div>
@@ -199,7 +197,7 @@ class BasicLayout extends React.Component {
                   <div>same</div>
                 </Col>
               </Row>
-            </div>
+            </div> */}
           </Content>
         </Switch>
         <Footer style={{ background: 'white', height: '100px' }}>
