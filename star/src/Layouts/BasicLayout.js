@@ -1,4 +1,4 @@
-import { Layout, Input, Avatar, Dropdown, Menu, Carousel, Icon, Row, Col, Card } from 'antd';
+import { Layout, Input, Avatar, Dropdown, Menu, Carousel, Icon } from 'antd';
 import React from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 // import HeaderSearch from 'ant-design-pro/lib/HeaderSearch';
@@ -107,11 +107,36 @@ class BasicLayout extends React.Component {
           <Route path="/write" render={() => <Write />} />
           <Content style={{ background: '#F5F5F5', minHeight: 1200, height: '1200px', width: '100%' }}>
             <Carousel autoplay className={styles.pic}>
-              <div><img src="http://m.chanyouji.cn/index-cover/45546-1628868.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
-              <div><img src="http://m.chanyouji.cn/index-cover/27926-894425.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
-              <div><img src="http://m.chanyouji.cn/index-cover/331-13837.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
-              <div><img src="http://m.chanyouji.cn/index-cover/497-21905.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
-              <div><img src="http://m.chanyouji.cn/index-cover/64695-2679221.jpg" alt="logo" style={{ width: '100%', height: '430px' }} /></div>
+              <div>
+                <img src="http://m.chanyouji.cn/index-cover/45546-1628868.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
+                <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
+                  <h2 className={styles.a}>图片来自《冰岛.神话》</h2>
+                </div>
+              </div>
+              <div>
+                <img src="http://m.chanyouji.cn/index-cover/27926-894425.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
+                <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
+                  <h2 className={styles.a}>图片来自《梦想实现的地方-马达加斯加第二季》</h2>
+                </div>
+              </div>
+              <div>
+                <img src="http://m.chanyouji.cn/index-cover/331-13837.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
+                <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
+                  <h2 className={styles.a}>图片来自《梦想实现的地方-马达加斯加第二季》</h2>
+                </div>
+              </div>
+              <div>
+                <img src="http://m.chanyouji.cn/index-cover/497-21905.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
+                <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
+                  <h2 className={styles.a}>图片来自《梦想实现的地方-马达加斯加第二季》</h2>
+                </div>
+              </div>
+              <div>
+                <img src="http://m.chanyouji.cn/index-cover/64695-2679221.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
+                <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
+                  <h2 className={styles.a}>图片来自《梦想实现的地方-马达加斯加第二季》</h2>
+                </div>
+              </div>
             </Carousel>
             <div style={{ display: 'flex', flexDirection: 'column' }}className={styles.word}>
               <div>
