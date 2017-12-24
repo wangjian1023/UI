@@ -35,14 +35,14 @@ class BasicLayout extends React.Component {
         <Layout className={styles.contents}>
           <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
             <Button className={styles.filter} type="primary">精选游记</Button>
-            <Button className={styles.filter}>精选游记</Button>
-            <Button className={styles.filter}>国外-其他</Button>
-            <Button className={styles.filter}>国外-港澳台</Button>
-            <Button className={styles.filter}>国外-大陆</Button>
+            <Button className={styles.filter} >精选游记</Button>
+            <Button className={styles.filter} >国外-其他</Button>
+            <Button className={styles.filter} >国外-港澳台</Button>
+            <Button className={styles.filter} style={{ }}>国外-大陆</Button>
           </div>
         </Layout>
         <Card
-          style={{ width: 300 }}
+          style={{ width: '300px' }}
           cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
           // actions={[<Icon type="setting" />, <Icon type="edit" />, <Icon type="ellipsis" />]}
         >

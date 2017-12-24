@@ -7,13 +7,11 @@ import { ContainerQuery } from 'react-container-query';
 import classnames from 'classnames';
 import view from '../routes/view';
 import book from '../routes/book';
-// import write from '../routes/write';
 import styles from './BasicLayout.less';
-import Write from '../routes/write';
 
 const { Header, Footer, Content } = Layout;
 const Search = Input.Search;
-// -// const SubMenu = Menu.SubMenu;
+// const SubMenu = Menu.SubMenu;
 // const MenuItemGroup = Menu.ItemGroup;
 const menu = (
   <Menu>
@@ -103,128 +101,77 @@ class BasicLayout extends React.Component {
             </Dropdown>
           </div>
         </Header>
-        <Switch>
-          <Route path="/write" render={() => <Write />} />
-          <Content style={{ background: '#F5F5F5', minHeight: 1200, height: '1200px', width: '100%' }}>
-            <Carousel autoplay className={styles.pic}>
-              <div>
-                <img src="http://m.chanyouji.cn/index-cover/45546-1628868.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
-                <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
-                  <h2 className={styles.a}>图片来自《冰岛.神话》</h2>
-                </div>
-              </div>
-              <div>
-                <img src="http://m.chanyouji.cn/index-cover/27926-894425.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
-                <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
-                  <h2 className={styles.a}>图片来自《梦想实现的地方-马达加斯加第二季》</h2>
-                </div>
-              </div>
-              <div>
-                <img src="http://m.chanyouji.cn/index-cover/331-13837.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
-                <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
-                  <h2 className={styles.a}>图片来自《梦想实现的地方-马达加斯加第二季》</h2>
-                </div>
-              </div>
-              <div>
-                <img src="http://m.chanyouji.cn/index-cover/497-21905.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
-                <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
-                  <h2 className={styles.a}>图片来自《梦想实现的地方-马达加斯加第二季》</h2>
-                </div>
-              </div>
-              <div>
-                <img src="http://m.chanyouji.cn/index-cover/64695-2679221.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
-                <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
-                  <h2 className={styles.a}>图片来自《梦想实现的地方-马达加斯加第二季》</h2>
-                </div>
-              </div>
-            </Carousel>
-            <div style={{ display: 'flex', flexDirection: 'column' }}className={styles.word}>
-              <div>
-                <h1 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C8C8C8', fontSize: '40px' }}>
-                  蝉游记
-                </h1>
-                <h1 className={styles.h1}>CHANYOUJI.COM</h1>
-              </div>
-            </div>
-            <Menu
-              onClick={this.handleClick}
-              selectedKeys={[this.state.current]}
-              mode="horizontal"
-              className={styles.middle}
-            >
-              <span className={styles.sep}>1</span>
-              <Menu.Item key="mail" className={styles.text}>
-                <Link to="/view">
-                  <Icon />发现好游记
-                </Link>
-              </Menu.Item>
-              <span className={styles.sep}>1</span>
-              <Menu.Item key="app" className={styles.text}>
-                <Link to="/book">
-                  <Icon />旅行口袋书
-                </Link>
-              </Menu.Item>
-              <span className={styles.sep} >1</span>
-              <Menu.Item key="happy" className={styles.text}>
-                <Link to="/write">
-                  <Icon />我要写游记
-                </Link>
-              </Menu.Item>
-              <span className={styles.sep} >1</span>
-            </Menu>
-            {/* <div className={styles.middle}>
-              <h3 className={styles.text}>发现好游记</h3>
-              <span className={styles.sep}>1</span>
-              <h3 className={styles.text}>旅行口袋书</h3>
-              <span className={styles.sep}>1</span>
-              <h3 className={styles.text}>我要写游记</h3>
-            </div> */}
+        <Content style={{ background: '#F5F5F5', minHeight: 1200, height: '1200px', width: '100%' }}>
+          <Carousel autoplay className={styles.pic}>
             <div>
-              <Switch>
-                <Route path="/book" component={book} />
-                <Route path="/view" component={view} />
-              </Switch>
+              <img src="http://m.chanyouji.cn/index-cover/45546-1628868.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
+              <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
+                <h2 className={styles.a}>图片来自《冰岛.神话》</h2>
+              </div>
             </div>
-            {/* <div>
-              <Row gutter={16}>
-                <Col span={3}>
-                  <div>same</div>
-                </Col>
-                <Col span={9}>
-                  <div>
-                    <Card
-                      style={{ width: 300 }}
-                      cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}            // actions={[<Icon type="setting" />, <Icon type="edit" />, <Icon type="ellipsis" />]}
-                    >
-                      <Meta
-                        avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                        title="Card title"
-                        description="This is the description"
-                      />
-                    </Card>
-                  </div>
-                </Col>
-                <Col span={9}>
-                  <div>
-                    <Card
-                      style={{ width: 300 }}
-                      cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}            // actions={[<Icon type="setting" />, <Icon type="edit" />, <Icon type="ellipsis" />]}
-                    >
-                      <Meta
-                        avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-                        title="Card title"
-                        description="This is the description"
-                      />
-                    </Card>
-                  </div>
-                </Col>
-                <Col span={3}>
-                  <div>same</div>
-                </Col>
-              </Row>
-            </div> */}
-          </Content>
-        </Switch>
+            <div>
+              <img src="http://m.chanyouji.cn/index-cover/27926-894425.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
+              <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
+                <h2 className={styles.a}>图片来自《梦想实现的地方-马达加斯加第二季》</h2>
+              </div>
+            </div>
+            <div>
+              <img src="http://m.chanyouji.cn/index-cover/331-13837.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
+              <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
+                <h2 className={styles.a}>图片来自《梦想实现的地方-马达加斯加第二季》</h2>
+              </div>
+            </div>
+            <div>
+              <img src="http://m.chanyouji.cn/index-cover/497-21905.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
+              <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
+                <h2 className={styles.a}>图片来自《梦想实现的地方-马达加斯加第二季》</h2>
+              </div>
+            </div>
+            <div>
+              <img src="http://m.chanyouji.cn/index-cover/64695-2679221.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
+              <div style={{ position: 'absolute', top: '240px', marginLeft: '500px' }}>
+                <h2 className={styles.a}>图片来自《梦想实现的地方-马达加斯加第二季》</h2>
+              </div>
+            </div>
+          </Carousel>
+          <div style={{ display: 'flex', flexDirection: 'column' }}className={styles.word}>
+            <div>
+              <h1 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C8C8C8', fontSize: '40px' }}>
+                蝉游记
+              </h1>
+              <h1 className={styles.h1}>CHANYOUJI.COM</h1>
+            </div>
+          </div>
+          <Menu
+            onClick={this.handleClick}
+            selectedKeys={[this.state.current]}
+            mode="horizontal"
+            className={styles.middle}
+          >
+            {/* <span className={styles.sep}>1</span> */}
+            <Menu.Item key="mail" className={styles.text}>
+              <Link to="/view">
+                <Icon />发现好游记
+              </Link>
+            </Menu.Item>
+            {/* <span className={styles.sep}>1</span> */}
+            <Menu.Item key="app" className={styles.text}>
+              <Link to="/book">
+                <Icon />旅行口袋书
+              </Link>
+            </Menu.Item>
+            {/* <span className={styles.sep} >1</span> */}
+            <Menu.Item key="happy" className={styles.text}>
+              <Link to="/write">
+                <Icon />我要写游记
+              </Link>
+            </Menu.Item>
+            {/* <span className={styles.sep} >1</span> */}
+          </Menu>
+          <Switch>
+            <Route path="/" component={this.state.current === 'mail' ? view : this.state.current === 'app' ? book : null} />
+          </Switch>
+        </Content>
         <Footer style={{ background: 'white', height: '100px' }}>
           <div className={styles.layout}>
             <h1>手机应用</h1>

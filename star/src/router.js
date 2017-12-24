@@ -2,14 +2,16 @@ import React from 'react';
 import { Router, Route, Switch } from 'dva/router';
 import 'antd/dist/antd.less';
 import BasicLayout from './Layouts/BasicLayout';
-// import write from './routes/write';
+import Write from './routes/write';
+// import view from './routes/view';
 
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
       <Switch>
+        <Route path="/write" render={() => <Write />} />
         <Route path="/" component={BasicLayout} />
-        {/* <Route path="/3" component={write} /> */}
+        {/* <IndexRoute component={view} /> */}
       </Switch>
     </Router>
   );

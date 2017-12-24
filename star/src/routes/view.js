@@ -27,7 +27,7 @@ const query = {
   },
 };
 
-class BasicLayout extends React.Component {
+class View extends React.Component {
   render() {
     const layout = (
       <div>
@@ -48,7 +48,7 @@ class BasicLayout extends React.Component {
             <Col span={9}>
               <div>
                 <Card
-                  style={{ width: 300 }}
+                  style={{ width: '300px' }}
                   cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}            // actions={[<Icon type="setting" />, <Icon type="edit" />, <Icon type="ellipsis" />]}
                 >
                   <Meta
@@ -89,4 +89,4 @@ class BasicLayout extends React.Component {
     );
   }
 }
-export default connect()(BasicLayout);
+export default connect()(View);
