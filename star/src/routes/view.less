@@ -22,3 +22,35 @@
     background: black;
   }
 }
+
+.hidder {
+  visibility: hidden;
+  // display: none;
+}
+
+.pic {
+  display: flex;
+  img{
+    position: relative;
+    z-index: -1;
+  }
+}
+.word {
+  width: 60px;
+  height: 60px;
+  
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 200px;
+  top: 265px;
+  text-align: center;
+  // background-color: rgba(0, 0, 0, 0.9);
+  opacity: 1;
+  // justify-content: center;
+  // align-items: center;
+  z-index: 4;
+}
+.text {
+  margin-top: 35px;
+  text-align: center;
+}

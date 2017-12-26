@@ -4,6 +4,7 @@ import 'antd/dist/antd.less';
 import BasicLayout from './Layouts/BasicLayout';
 import Write from './routes/write';
 // import view from './routes/view';
+// import book from './routes/book';
 
 function RouterConfig({ history }) {
   return (

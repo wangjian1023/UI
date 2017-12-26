@@ -148,25 +148,25 @@ class BasicLayout extends React.Component {
             mode="horizontal"
             className={styles.middle}
           >
-            {/* <span className={styles.sep}>1</span> */}
+            {/* <span className={styles.sep}>a</span> */}
             <Menu.Item key="mail" className={styles.text}>
               <Link to="/view">
                 <Icon />发现好游记
               </Link>
             </Menu.Item>
-            {/* <span className={styles.sep}>1</span> */}
+            {/* <span className={styles.sep}>a</span> */}
             <Menu.Item key="app" className={styles.text}>
               <Link to="/book">
                 <Icon />旅行口袋书
               </Link>
             </Menu.Item>
-            {/* <span className={styles.sep} >1</span> */}
+            {/* <span className={styles.sep} >a</span> */}
             <Menu.Item key="happy" className={styles.text}>
               <Link to="/write">
                 <Icon />我要写游记
               </Link>
             </Menu.Item>
-            {/* <span className={styles.sep} >1</span> */}
+            {/* <span className={styles.sep} >a</span> */}
           </Menu>
           <Switch>
             <Route path="/" component={this.state.current === 'mail' ? view : this.state.current === 'app' ? book : null} />
