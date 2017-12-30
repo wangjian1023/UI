@@ -41,7 +41,7 @@ class View extends React.Component {
           </div>
         </Layout>
         <div>
-          <Row gutter={16}>
+          <Row gutter={14}>
             <Col span={3} className={styles.hidder}>
               <div>same</div>
             </Col>
