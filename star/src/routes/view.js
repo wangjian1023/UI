@@ -59,7 +59,7 @@ class View extends React.Component {
                   />
                   <div className={styles.text} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
                     <h3>单车自驾：魔幻张家界</h3>
-                    <p>2016年4月5日 / 4天 / 128图4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444</p>
+                    <p>2016年4月5日 / 4天 / 128图</p>
                   </div>
                 </Card>
               </div>
