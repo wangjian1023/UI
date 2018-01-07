@@ -1,4 +1,4 @@
-import { Layout, Input, Button, Avatar, Menu, Dropdown } from 'antd';
+import { Layout, Input, Button, Avatar, Menu, Dropdown, Icon } from 'antd';
 import React from 'react';
 // import { Link } from 'react-router-dom';
 // import HeaderSearch from 'ant-design-pro/lib/HeaderSearch';
@@ -110,7 +110,11 @@ class Write extends React.Component {
             <div className={styles.text} style={{ display: 'flex', flexDirection: 'column' }}>
               <h1 className={styles.size}>给游记起个名字</h1>
               <Input className={styles.border} onChange={e => this.setState({ content: e.target.value })} type="text" maxLength="16" />
-              <Button className={styles.buttom} disabled={this.state.content === ''} id="button_id" type="primary" onClick={this.handleSubmit}>确定</Button>
+              <Button className={styles.buttom} disabled={this.state.content === ''} id="button_id" type="primary" onClick={this.handleSubmit}>
+                <Link to="/app">
+                  <Icon />下一步
+                </Link>
+              </Button>
             </div>
           </Content>
         </Layout>
