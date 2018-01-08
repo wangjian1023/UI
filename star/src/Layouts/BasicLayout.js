@@ -26,7 +26,6 @@ const menu = (
   </Menu>
 );
 
-
 const query = {
   'screen-xs': {
     maxWidth: 575,
@@ -199,4 +198,5 @@ class BasicLayout extends React.Component {
     );
   }
 }
+
 export default connect()(BasicLayout);

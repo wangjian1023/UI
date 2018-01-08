@@ -27,7 +27,6 @@ const query = {
 };
 const { Meta } = Card;
 
-
 class BasicLayout extends React.Component {
   render() {
     const layout = (
@@ -62,4 +61,5 @@ class BasicLayout extends React.Component {
     );
   }
 }
+
 export default connect()(BasicLayout);

@@ -111,14 +111,14 @@ class Write extends React.Component {
               <h1 className={styles.size}>给游记起个名字</h1>
               <Input className={styles.border} onChange={e => this.setState({ content: e.target.value })} type="text" maxLength="16" />
               <Button className={styles.buttom} disabled={this.state.content === ''} id="button_id" type="primary" onClick={this.handleSubmit}>
-                <Link to="/app">
+                <Link to="/write/app">
                   <Icon />下一步
                 </Link>
               </Button>
             </div>
           </Content>
         </Layout>
-        <Footer style={{ background: 'white', height: '100px' }}>
+        <Footer style={{ background: 'white', height: '80px' }}>
           <div className={styles.layout}>
             <h1>手机应用</h1>
             <h1 >|</h1>

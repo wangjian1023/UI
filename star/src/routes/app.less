@@ -1,36 +1,28 @@
-@import "~antd/lib/style/themes/default.less";
+// @import "~antd/lib/style/themes/default.less";
 
 .header{
   display: flex;
-  flex-direction: row;
   align-items: center;
   background: #030507;
-  padding-left: 10px;
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 64px;
-  width: 130px;
-  position: relative;
+  padding: 0 10px;
   line-height: 64px;
-  transition: all .3s;
-  background: #030507;
-  overflow: hidden;
-  border-bottom-color: gray;
+  background: red;
   img {
-    display: inline-block;
-    vertical-align: middle;
     height: 45px;
     width: 45px;
-    margin: 0px 0px 3px 0px; 
   }
   h1 {
     color: #fff;
     display: inline-block;
-    vertical-align: middle;
     font-size: 20px;
-    // padding: 0px 0px 0px 10px;
-    margin: 0 0 0 10px;
+    margin-left: 10px;
     font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     // font-weight: 700;
   }
@@ -44,30 +36,24 @@
 }
 
 .same {
-  height: 60px;
-  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: gray;
+  border: 1px solid seashell;
+  padding: 10px;
 
   h2{
     color: silver;
-    display: inline-block;
-    vertical-align: middle;
+    // display: inline-block;
+    // vertical-align: middle;
     font-size: 20px;
-    padding: 0px 0px 0px 15px;
-    font-weight: 500;
+    // line-height: 30px;
+    // padding: 0px 0px 0px 15px;
+    // font-weight: 500;
 
   }
 
-}
-.ant-carousel .slick-slide {
-  text-align: center;
-  height: 160px;
-  line-height: 160px;
-  background: #14161a;
-  overflow: hidden;
-}
-
-.ant-carousel .slick-slide h3 {
-  color: #fff;
 }
 
 .pic {
@@ -98,8 +84,7 @@
     margin-top: 30px;
   }
 }
-
-           //中部样式页面内按钮跳转样式
+ //中部样式页面内按钮跳转样式
 // .middle {
 //   // background: url("http://i01.pic.sogou.com/f9a39ba1d72cb7d7");
 //   display: flex;
@@ -132,7 +117,7 @@
 //   vertical-align: middle;
 // }
 
-                       //首页底部样式
+//首页底部样式
 .layout {
   display: flex;
   justify-content: space-around;
@@ -154,15 +139,6 @@
   font-size: 16px;
   margin: 0 auto;
 }
-// .add-trip-name {
-//   width: 500px;
-//   margin-top: 8px;
-//   height: 22px;
-//   line-height: 22px;
-//   font-size: 20px;
-//   text-align: center;
-// }
-
 
 .text {
   display: flex;
@@ -199,4 +175,31 @@
 .size {
   font-size: 25px;
   color: gray;
+}
+
+.copyright {
+  display:  flex;
+  font-size: 30px;
+}
+
+.frame {
+  // text-align: center;
+  width: 134px;
+  height: 45px;
+}
+
+.connect {
+  display: flex;
+  align-items: center;
+  margin-top:150px;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+  color: rgb(216, 214, 214);
+}
+.list {
+  visibility: hidden;
+  display: inline-block;
+  height: 150px;
+  background-color: white;
 }
