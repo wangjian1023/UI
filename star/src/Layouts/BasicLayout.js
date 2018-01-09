@@ -11,8 +11,6 @@ import styles from './BasicLayout.less';
 
 const { Header, Footer, Content } = Layout;
 const Search = Input.Search;
-// const SubMenu = Menu.SubMenu;
-// const MenuItemGroup = Menu.ItemGroup;
 const menu = (
   <Menu>
     <Menu.Item key="0">
@@ -92,7 +90,7 @@ class BasicLayout extends React.Component {
           <div className={styles.same}>
             <h2>氢气球旅行</h2>
           </div>
-          <div style={{ lineHeight: '0px', marginLeft: '500px', flexDirection: 'row' }}>
+          <div style={{ lineHeight: '0px', marginLeft: '760px', flexDirection: 'row' }}>
             <Dropdown overlay={menu} trigger={['click']}>
               <a className="ant-dropdown-link" href="/#" style={{ display: 'flex', flexDirection: 'row' }}>
                 <Avatar icon="user" />
@@ -135,10 +133,10 @@ class BasicLayout extends React.Component {
           </Carousel>
           <div style={{ display: 'flex', flexDirection: 'column' }}className={styles.word}>
             <div>
-              <h1 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C8C8C8', fontSize: '40px' }}>
+              <h3 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C8C8C8', fontSize: '40px' }}>
                 蝉游记
-              </h1>
-              <h1 className={styles.h1}>CHANYOUJI.COM</h1>
+              </h3>
+              <h3 className={styles.h1}>CHANYOUJI.COM</h3>
             </div>
           </div>
           <Menu
@@ -171,20 +169,20 @@ class BasicLayout extends React.Component {
             <Route path="/" component={this.state.current === 'mail' ? view : this.state.current === 'app' ? book : null} />
           </Switch>
         </Content>
-        <Footer style={{ background: 'white', height: '100px' }}>
+        <Footer style={{ background: 'white', height: '80px', display: 'flex' }}>
           <div className={styles.layout}>
-            <h1>手机应用</h1>
-            <h1 >|</h1>
-            <h1 >口袋攻略</h1>
-            <h1 >|</h1>
-            <h1>意见反馈</h1>
-            <h1>|</h1>
-            <h1>联系我们</h1>
-            <h1>|</h1>
-            <h1 style={{ paddingRight: '350px' }}>使用条款</h1>
+            <h4>手机应用</h4>
+            <h4 >|</h4>
+            <h4 >口袋攻略</h4>
+            <h4 >|</h4>
+            <h4>意见反馈</h4>
+            <h4>|</h4>
+            <h4>联系我们</h4>
+            <h4>|</h4>
+            <h4 style={{ paddingRight: '350px' }}>使用条款</h4>
           </div>
           <div>
-            <h2 className={styles.h2}>蝉游记  沪ICP备1号文案</h2>
+            <h5 className={styles.h5}>蝉游记  沪ICP备1号文案</h5>
           </div>
         </Footer>
       </Layout>

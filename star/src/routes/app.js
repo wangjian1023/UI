@@ -60,7 +60,6 @@ class App extends React.Component {
         <Header className={styles.header}>
           <div className={styles.logo}>
             <Link to="/">
-              <img src="http://img0.imgtn.bdimg.com/it/u=3217250670,334492950&fm=27&gp=0.jpg" alt="logo" />
               <h1>蝉游记</h1>
             </Link>
           </div>
@@ -68,16 +67,16 @@ class App extends React.Component {
             <Search
               placeholder="搜索"
               onSearch={value => console.log(value)}
-              style={{ width: 200 }}
+              style={{ width: '200px' }}
             />
           </div>}
           <div className={styles.same}>
             <h2>手机应用</h2>
           </div>
           <div className={styles.same}>
-            <h2 style={{ paddingRight: '5px' }}>氢气球旅行</h2>
+            <h2>氢气球旅行</h2>
           </div>
-          <div style={{ lineHeight: '0px', marginLeft: '72px', flexDirection: 'row' }}>
+          <div style={{ lineHeight: '0px', marginLeft: '800px', flexDirection: 'row' }}>
             <Dropdown overlay={menu} trigger={['click']}>
               <a className="ant-dropdown-link" href="/#" style={{ display: 'flex', flexDirection: 'row' }}>
                 <Avatar icon="user" />
@@ -110,7 +109,7 @@ class App extends React.Component {
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '650px', alignItems: 'center', justifyContent: 'center', lineHeight: '20px' }}>
                 <Button className={styles.frame}>添加相片</Button>
-                <div style={{ fontsize: '5px' }}>添加相片最多上传128张相片，按 “ctrl” 键支持多选</div>
+                <div style={{ fontsize: '10px' }}>添加相片最多上传128张相片，按 “ctrl” 键支持多选</div>
               </div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>

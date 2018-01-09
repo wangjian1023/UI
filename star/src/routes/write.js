@@ -1,7 +1,5 @@
 import { Layout, Input, Button, Avatar, Menu, Dropdown, Icon } from 'antd';
 import React from 'react';
-// import { Link } from 'react-router-dom';
-// import HeaderSearch from 'ant-design-pro/lib/HeaderSearch';
 import { connect } from 'dva';
 import { Link } from 'react-router-dom';
 import { ContainerQuery } from 'react-container-query';
@@ -11,12 +9,6 @@ import styles from './write.less';
 
 const { Header, Footer, Content } = Layout;
 const Search = Input.Search;
-// const FormItem = Form.Item;
-// const Option = Select.Option;
-// const RadioGroup = Radio.Group;
-
-// const Search = Input.Search;
-
 const menu = (
   <Menu>
     <Menu.Item key="0">
@@ -97,7 +89,7 @@ class Write extends React.Component {
           <div className={styles.same}>
             <h2>氢气球旅行</h2>
           </div>
-          <div style={{ lineHeight: '0px', marginLeft: '500px', flexDirection: 'row' }}>
+          <div style={{ lineHeight: '0px', marginLeft: '750px', flexDirection: 'row' }}>
             <Dropdown overlay={menu} trigger={['click']}>
               <a className="ant-dropdown-link" href="/#" style={{ display: 'flex', flexDirection: 'row' }}>
                 <Avatar icon="user" />
@@ -106,7 +98,7 @@ class Write extends React.Component {
           </div>
         </Header>
         <Layout>
-          <Content style={{ background: '#F5F5F5', minHeight: 600, height: '600px', width: '100%', flexDirection: 'column' }}>
+          <Content style={{ background: '#F5F5F5', minHeight: 700, height: '700px', width: '100%', flexDirection: 'column' }}>
             <div className={styles.text} style={{ display: 'flex', flexDirection: 'column' }}>
               <h1 className={styles.size}>给游记起个名字</h1>
               <Input className={styles.border} onChange={e => this.setState({ content: e.target.value })} type="text" maxLength="16" />
@@ -118,20 +110,20 @@ class Write extends React.Component {
             </div>
           </Content>
         </Layout>
-        <Footer style={{ background: 'white', height: '80px' }}>
+        <Footer style={{ background: 'white', height: '60px' }}>
           <div className={styles.layout}>
-            <h1>手机应用</h1>
-            <h1 >|</h1>
-            <h1 >口袋攻略</h1>
-            <h1 >|</h1>
-            <h1>意见反馈</h1>
-            <h1>|</h1>
-            <h1>联系我们</h1>
-            <h1>|</h1>
-            <h1 style={{ paddingRight: '350px' }}>使用条款</h1>
+            <h4>手机应用</h4>
+            <h4 >|</h4>
+            <h4 >口袋攻略</h4>
+            <h4 >|</h4>
+            <h4>意见反馈</h4>
+            <h4>|</h4>
+            <h4>联系我们</h4>
+            <h4>|</h4>
+            <h4 style={{ paddingRight: '350px' }}>使用条款</h4>
           </div>
           <div>
-            <h2 className={styles.h2}>蝉游记  沪ICP备1号文案</h2>
+            <h2 className={styles.h5}>蝉游记  沪ICP备1号文案</h2>
           </div>
         </Footer>
       </Layout>
