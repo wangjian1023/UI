@@ -11,7 +11,7 @@ function RouterConfig({ history }) {
   return (
     <Router history={history}>
       <Switch>
-        <Route path="/write/app" component={App} />
+        <Route exact path="/write/app" component={App} />
         <Route path="/write" render={() => <Write />} />
         {/* <Route path="/app" render={() => <app />} /> */}
         <Route path="/" component={BasicLayout} />

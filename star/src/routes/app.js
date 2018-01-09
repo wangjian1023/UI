@@ -85,29 +85,53 @@ class App extends React.Component {
           </div>
         </Header>
         <Layout>
-          <Content style={{ background: '#F8F8F8', minHeight: 600, height: '600px', width: '100%', flexDirection: 'column' }}>
-            <div style={{ display: 'flex', flexDirection: 'row', height: '80px', background: 'white' }}>
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <img style={{ height: '40px', width: '40px', borderRadius: '50%' }}src="http://i04.pictn.sogoucdn.com/d394e86cf0088fe7" alt="" />
-                <h1>上传照片</h1>
+          <Content style={{ background: '#F8F8F8', minHeight: 600, height: '600px' }}>
+            <div style={{ display: 'flex', height: '100px', background: 'white', alignItems: 'center' }}>
+              <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', width: '650px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ height: '50px', width: '60px', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+                    <img style={{ height: '40px', width: '40px', borderRadius: '50%' }}src={require('../components/image/update.png')} alt="pic" />
+                  </div>
+                  <div>上传照片</div>
+                </div>
+                <div style={{ justifyContent: 'center', marginTop: '20px', display: 'flex' }}>
+                  <div style={{ height: '20px', width: '20px', borderRadius: '50%', backgroundColor: '#F8F8F8', color: '#F8F8F8' }}>1</div>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ height: '50px', width: '60px', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+                    <img style={{ height: '40px', width: '40px', borderRadius: '50%' }}src={require('../components/image/positon.png')} alt="pic" />
+                  </div>
+                  <div>修改行程</div>
+                </div>
+                <div style={{ justifyContent: 'center', marginTop: '20px', display: 'flex' }}>
+                  <div style={{ height: '20px', width: '20px', borderRadius: '50%', backgroundColor: '#F8F8F8', color: '#F8F8F8' }}>1</div>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ height: '50px', width: '60px', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+                    <img style={{ height: '40px', width: '40px', borderRadius: '50%' }} src={require('../components/image/ban.png')} alt="pic" />
+                  </div>
+                  <div>编辑排版</div>
+                </div>
+                <div style={{ justifyContent: 'center', marginTop: '20px', display: 'flex' }}>
+                  <div style={{ height: '20px', width: '20px', borderRadius: '50%', backgroundColor: '#F8F8F8', color: '#F8F8F8' }}>1</div>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ height: '50px', width: '60px', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+                    <img style={{ height: '40px', width: '40px', borderRadius: '50%', backgroundColor: 'white' }}src={require('../components/image/perfect.png')} alt="pic" />
+                  </div>
+                  <div>发布游记</div>
+                </div>
+                <div style={{ justifyContent: 'center', marginTop: '20px', display: 'flex' }}>
+                  <div style={{ height: '20px', width: '20px', borderRadius: '50%', backgroundColor: '#F8F8F8', color: '#F8F8F8' }}>1</div>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ height: '50px', width: '60px', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+                    <img style={{ height: '40px', width: '40px', borderRadius: '50%' }}src={require('../components/image/copy.png')} alt="pic" />
+                  </div>
+                  <div>印制游记</div>
+                </div>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <img style={{ height: '40px', width: '40px', borderRadius: '50%' }}src="http://i03.pictn.sogoucdn.com/146c804321eef8d4" alt="" />
-                <h1>修改行程</h1>
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <img style={{ height: '40px', width: '40px', borderRadius: '50%' }}src="http://i03.pictn.sogoucdn.com/146c804321eef8d4" alt="" />
-                <div>编辑排版</div>
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <img style={{ height: '40px', width: '40px', borderRadius: '50%' }}src="http://i03.pictn.sogoucdn.com/146c804321eef8d4" alt="" />
-                <div>发布游记</div>
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <img style={{ height: '40px', width: '40px', borderRadius: '50%' }}src="http://i03.pictn.sogoucdn.com/146c804321eef8d4" alt="" />
-                <div>印制游记</div>
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '650px', alignItems: 'center', justifyContent: 'center', lineHeight: '20px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '450px', alignItems: 'center', justifyContent: 'center' }}>
                 <Button className={styles.frame}>添加相片</Button>
                 <div style={{ fontsize: '10px' }}>添加相片最多上传128张相片，按 “ctrl” 键支持多选</div>
               </div>
