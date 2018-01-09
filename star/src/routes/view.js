@@ -1,4 +1,4 @@
-import { Layout, Button, Row, Col, Card, Avatar } from 'antd';
+import { Layout, Button, Row, Col, Card, Avatar, Menu, Dropdown, Icon } from 'antd';
 import React from 'react';
 import { connect } from 'dva';
 import { ContainerQuery } from 'react-container-query';
@@ -26,6 +26,20 @@ const query = {
     minWidth: 1200,
   },
 };
+const menu = (
+  <Menu style={{ width: '400px', height: '450px', display: 'flex', justifyContent: 'row' }}>
+    <Menu.Item>
+      <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/"><span>1st menu item</span></a>
+    </Menu.Item>
+    <Menu.Item>
+      <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">2nd menu item</a>
+    </Menu.Item>
+    <Menu.Item>
+      <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">3rd menu item</a>
+    </Menu.Item>
+  </Menu>
+);
+
 
 class View extends React.Component {
   state = {
@@ -43,6 +57,12 @@ class View extends React.Component {
             <Button className={styles.filter}>国外-大陆</Button>
           </div>
         </Layout>
+
+        <Dropdown overlay={menu}>
+          <a className="ant-dropdown-link">
+            Hover me <Icon type="down" />
+          </a>
+        </Dropdown>
         <div>
           <Row gutter={14}>
             <Col span={3} className={styles.hidder}>
