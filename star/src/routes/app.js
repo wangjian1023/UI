@@ -132,7 +132,7 @@ class App extends React.Component {
                 </div>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '450px', alignItems: 'center', justifyContent: 'center' }}>
-                <Button className={styles.frame}>添加相片</Button>
+                <Button className={styles.frame} type="primary">添加相片</Button>
                 <div style={{ fontsize: '10px' }}>添加相片最多上传128张相片，按 “ctrl” 键支持多选</div>
               </div>
             </div>

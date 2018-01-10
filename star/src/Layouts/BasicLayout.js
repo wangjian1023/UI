@@ -182,7 +182,7 @@ class BasicLayout extends React.Component {
             <h4 style={{ paddingRight: '350px' }}>使用条款</h4>
           </div>
           <div>
-            <h5 className={styles.h5}>蝉游记  沪ICP备1号文案</h5>
+            <h1 className={styles.h5}>蝉游记  沪ICP备1号文案</h1>
           </div>
         </Footer>
       </Layout>
