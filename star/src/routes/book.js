@@ -1,4 +1,4 @@
-import { Layout, Button, Row, Col } from 'antd';
+import { Layout, Button } from 'antd';
 import React from 'react';
 import { connect } from 'dva';
 import { ContainerQuery } from 'react-container-query';
@@ -40,46 +40,31 @@ class BasicLayout extends React.Component {
             <Button className={styles.filter} style={{ }}>国外-大陆</Button>
           </div>
         </Layout>
-        <div>
-          <Row gutter={10}>
-            <Col className={styles.hidder}>
-              <div>same</div>
-            </Col>
-            <Col>
-              <div style={{ position: 'relative', margin: '0' }}>
-                <img alt="pic" className={styles.pic}src="http://m.chanyouji.cn/destinations/55-portrait.jpg" />
-                <div className={styles.text}>
-                  <div className={styles.riben}>日本</div>
-                  <div className={styles.ribenn}>Japan</div>
-                </div>
-                <p className={styles.lvxing}>旅行地1010</p>
-              </div>
-            </Col>
-            <Col span={6}>
-              <div>
-                <img alt="pic" className={styles.pic} src="http://m.chanyouji.cn/destinations/45-portrait.jpg" />
-              </div>
-              <div>
-                <div className={styles.text}>泰国</div>
-                <p className={styles.text} style={{ fontSize: '15px', top: '70px' }}>Thailand</p>
-                <p className={styles.text} style={{ fontSize: '15px', top: '360px', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>旅行地572</p>
-              </div>
-            </Col>
-            <Col span={6}>
-              <div>
-
-                <img alt="pic" className={styles.pic} src="http://m.chanyouji.cn/destinations/47-portrait.jpg" />
-                <div>
-                  <div className={styles.text}>韩国</div>
-                  <p className={styles.text} style={{ fontSize: '15px', top: '70px', textAlign: 'center' }}>South Korea</p>
-                  <p className={styles.text} style={{ fontSize: '15px', top: '360px', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>旅行地309</p>
-                </div>
-              </div>
-            </Col>
-            <Col span={3} className={styles.hidder}>
-              <div>same</div>
-            </Col>
-          </Row>
+        <div className={styles.overall}>
+          <div style={{ position: 'relative' }}>
+            <img alt="pic" className={styles.pic}src="http://m.chanyouji.cn/destinations/55-portrait.jpg" />
+            <h1 className={styles.text}>
+              <span>日本</span>
+              <div style={{ fontSize: '20px' }}>Japan</div>
+            </h1>
+            <h2 className={styles.list}>旅行地1010</h2>
+          </div>
+          <div style={{ position: 'relative' }}>
+            <img alt="pic" className={styles.pic} src="http://m.chanyouji.cn/destinations/45-portrait.jpg" />
+            <h1 className={styles.text}>
+              <span>泰国</span>
+              <div style={{ fontSize: '20px' }}>Thailand</div>
+            </h1>
+            <h2 className={styles.list}>旅行地572</h2>
+          </div>
+          <div style={{ position: 'relative' }}>
+            <img alt="pic" className={styles.pic} src="http://m.chanyouji.cn/destinations/47-portrait.jpg" />
+            <h1 className={styles.text}>
+              <span>韩国</span>
+              <div style={{ fontSize: '20px' }}>South Korea</div>
+            </h1>
+            <h2 className={styles.list}>旅行地309</h2>
+          </div>
         </div>
       </div>
     );

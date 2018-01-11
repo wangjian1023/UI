@@ -50,11 +50,10 @@ class View extends React.Component {
       <div>
         <Layout className={styles.contents}>
           <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-            <Button className={styles.filter} type="primary">国外-亚洲</Button>
-            <Button className={styles.filter}>国外-欧洲</Button>
-            <Button className={styles.filter}>国外-其他</Button>
-            <Button className={styles.filter}>国外-港澳台</Button>
-            <Button className={styles.filter}>国外-大陆</Button>
+            <Button className={styles.filter} type="primary">精选游记</Button>
+            <Button className={styles.filter}>出发时间</Button>
+            <Button className={styles.filter}>国外旅行地</Button>
+            <Button className={styles.filter}>国内旅行地</Button>
           </div>
         </Layout>
 
