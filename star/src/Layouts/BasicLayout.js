@@ -1,3 +1,7 @@
+/**
+ *  2017-01-12  Wang Jian
+ */
+
 import { Layout, Input, Avatar, Dropdown, Menu, Carousel, Icon } from 'antd';
 import React from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
@@ -66,18 +70,6 @@ class BasicLayout extends React.Component {
             </Link>
           </div>
           {<div className={styles.search}>
-            {/* <HeaderSearch
-              placeholder="🔍 站内搜索"
-              dataSource={['搜索提示一', '搜索提示二', '搜索提示三']}
-              onSearch={(value) => {
-                console.log('input', value); // eslint-disable-line
-              }}
-              onPressEnter={(value) => {
-                console.log('enter', value); // eslint-disable-line
-              }}
-            /> */}
-          </div>}
-          {<div className={styles.search}>
             <Search
               placeholder="搜索"
               onSearch={value => console.log(value)}
@@ -98,7 +90,7 @@ class BasicLayout extends React.Component {
             </Dropdown>
           </div>
         </Header>
-        <Content style={{ background: '#F5F5F5', minHeight: 1200, height: '1200px', width: '100%' }}>
+        <Content style={{ background: '#F5F5F5', width: '100%' }}>
           <Carousel autoplay className={styles.pic}>
             <div>
               <img src="http://m.chanyouji.cn/index-cover/45546-1628868.jpg" alt="logo" style={{ width: '100%', height: '430px' }} />
@@ -145,25 +137,21 @@ class BasicLayout extends React.Component {
             mode="horizontal"
             className={styles.middle}
           >
-            {/* <span className={styles.sep}>a</span> */}
             <Menu.Item key="mail" className={styles.text}>
               <Link to="/view">
                 <Icon />发现好游记
               </Link>
             </Menu.Item>
-            {/* <span className={styles.sep}>a</span> */}
             <Menu.Item key="app" className={styles.text}>
               <Link to="/book">
                 <Icon />旅行口袋书
               </Link>
             </Menu.Item>
-            {/* <span className={styles.sep} >a</span> */}
             <Menu.Item key="happy" className={styles.text}>
               <Link to="/write">
                 <Icon />我要写游记
               </Link>
             </Menu.Item>
-            {/* <span className={styles.sep} >a</span> */}
           </Menu>
           <Switch>
             <Route path="/" component={this.state.current === 'mail' ? view : this.state.current === 'app' ? book : null} />

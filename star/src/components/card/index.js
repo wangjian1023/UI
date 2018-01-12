@@ -1,3 +1,7 @@
+/**
+ *  2017-01-12  Wang Jian
+ */
+
 import { Row, Col, Card, Avatar } from 'antd';
 import React from 'react';
 import { connect } from 'dva';
@@ -23,7 +27,7 @@ class card extends React.Component {
             <div>
               <Card
                 style={{ width: '500px', height: '430px' }}
-                cover={<img alt="example" className={styles.pic} src="{this.state.pic}" />}            // actions={[<Icon type="setting" />, <Icon type="edit" />, <Icon type="ellipsis" />]}
+                cover={<img alt="example" className={styles.pic} src="{this.state.pic}" />}
               >
                 <Meta
                   avatar={<Avatar className={styles.word} src="{this.state.avater}" />}
@@ -39,7 +43,7 @@ class card extends React.Component {
             <div>
               <Card
                 style={{ width: '500px', height: '430px' }}
-                cover={<img alt="example" className={styles.pic} src="http://p.chanyouji.cn/666746/1485787660939p1b7ntf07u16kdssn1tfl1ck1q1qd.jpg?imageView2/1/w/480/h/288" />}            // actions={[<Icon type="setting" />, <Icon type="edit" />, <Icon type="ellipsis" />]}
+                cover={<img alt="example" className={styles.pic} src="http://p.chanyouji.cn/666746/1485787660939p1b7ntf07u16kdssn1tfl1ck1q1qd.jpg?imageView2/1/w/480/h/288" />}
               >
                 <Meta
                   avatar={<Avatar className={styles.word} src="http://a.chanyouji.cn/469471/1460020629.jpg" />}

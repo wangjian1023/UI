@@ -1,9 +1,14 @@
+/**
+ *  2017-01-12  Wang Jian
+ */
+
 import { Layout, Button } from 'antd';
 import React from 'react';
 import { connect } from 'dva';
 import { ContainerQuery } from 'react-container-query';
 import classnames from 'classnames';
 import styles from './book.less';
+import Page from '../components/page/page';
 
 const query = {
   'screen-xs': {
@@ -40,32 +45,7 @@ class BasicLayout extends React.Component {
             <Button className={styles.filter} style={{ }}>国外-大陆</Button>
           </div>
         </Layout>
-        <div className={styles.overall}>
-          <div style={{ position: 'relative' }}>
-            <img alt="pic" className={styles.pic}src="http://m.chanyouji.cn/destinations/55-portrait.jpg" />
-            <h1 className={styles.text}>
-              <span>日本</span>
-              <div style={{ fontSize: '20px' }}>Japan</div>
-            </h1>
-            <h2 className={styles.list}>旅行地1010</h2>
-          </div>
-          <div style={{ position: 'relative' }}>
-            <img alt="pic" className={styles.pic} src="http://m.chanyouji.cn/destinations/45-portrait.jpg" />
-            <h1 className={styles.text}>
-              <span>泰国</span>
-              <div style={{ fontSize: '20px' }}>Thailand</div>
-            </h1>
-            <h2 className={styles.list}>旅行地572</h2>
-          </div>
-          <div style={{ position: 'relative' }}>
-            <img alt="pic" className={styles.pic} src="http://m.chanyouji.cn/destinations/47-portrait.jpg" />
-            <h1 className={styles.text}>
-              <span>韩国</span>
-              <div style={{ fontSize: '20px' }}>South Korea</div>
-            </h1>
-            <h2 className={styles.list}>旅行地309</h2>
-          </div>
-        </div>
+        <Page />
       </div>
     );
 

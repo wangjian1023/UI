@@ -1,10 +1,14 @@
+/**
+ *  2017-01-12  Wang Jian
+ */
+
 import { Layout, Input, Avatar, Menu, Dropdown, Button } from 'antd';
 import React from 'react';
 import { connect } from 'dva';
 import { Link } from 'react-router-dom';
 import { ContainerQuery } from 'react-container-query';
 import classnames from 'classnames';
-import styles from './app.less';
+import styles from './compile.less';
 
 const { Header, Footer, Content } = Layout;
 const Search = Input.Search;
