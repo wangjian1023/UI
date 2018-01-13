@@ -123,7 +123,10 @@ class BasicLayout extends React.Component {
               </div>
             </div>
           </Carousel>
-          <div style={{ display: 'flex', flexDirection: 'column' }}className={styles.word}>
+          <div
+            style={{ display: 'flex', flexDirection: 'column' }}
+            className={styles.word}
+          >
             <div>
               <h3 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#C8C8C8', fontSize: '40px' }}>
                 蝉游记
@@ -133,7 +136,7 @@ class BasicLayout extends React.Component {
           </div>
           <Menu
             onClick={this.handleClick}
-            selectedKeys={[this.state.current]}
+            selectedKeys={this.state.current}
             mode="horizontal"
             className={styles.middle}
           >
@@ -158,7 +161,9 @@ class BasicLayout extends React.Component {
           </Switch>
         </Content>
         <Footer style={{ background: 'white', height: '80px', display: 'flex' }}>
-          <div className={styles.layout}>
+          <div
+            className={styles.layout}
+          >
             <h4>手机应用</h4>
             <h4 >|</h4>
             <h4 >口袋攻略</h4>

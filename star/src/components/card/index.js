@@ -32,7 +32,10 @@ class card extends React.Component {
                 <Meta
                   avatar={<Avatar className={styles.word} src="{this.state.avater}" />}
                 />
-                <div className={styles.text} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+                <div
+                  className={styles.text}
+                  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}
+                >
                   <h3>{this.state.Word}</h3>
                   <p>{this.state.time} / {this.state.day}/ {this.state.paper}</p>
                 </div>
@@ -48,7 +51,10 @@ class card extends React.Component {
                 <Meta
                   avatar={<Avatar className={styles.word} src="http://a.chanyouji.cn/469471/1460020629.jpg" />}
                 />
-                <div className={styles.text} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+                <div
+                  className={styles.text}
+                  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}
+                >
                   <h3>【斯里兰卡10天】跨过山和大海</h3>
                   <p>2016年12月24日 / 10天 / 122图</p>
                 </div>

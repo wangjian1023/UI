@@ -10,40 +10,28 @@ class Page extends React.Component {
   render() {
     const { allScenic } = this.props;
     return (
-      <div style={{ display: 'flex', flexDirection: 'row', margin: '20px 150px 20px 150px', flexWrap: 'wrap' }}>
+      <div className={styles.overall}>
         {
-        // allScenic.map(item => (
-        //   <div className={styles.all}>
-        //     <div
-        //       key={item.key}
-        //       className={styles.overall}
-        //     >
-        //       <div style={{ position: 'relative' }}>
-        //         <img
-        //           alt="pic" className={styles.pic} src={item.src}
-        //         />
-        //         <h1 className={styles.text}>
-        //           <span>{item.position}</span>
-        //           <div
-        //             style={{ fontSize: '20px' }}
-        //           >
-        //             {item.description}
-        //           </div>
-        //         </h1>
-        //         <h2 className={styles.list}>
-        //           {item.number}
-        //         </h2>
-        //       </div>
-        //     </div>
-        //   </div>
-        // ))
         allScenic.map(item => (
           <div
             key={item.key}
           >
-            <img
-              alt="pic" className={styles.pic} src={item.src}
-            />
+            <div style={{ position: 'relative' }}>
+              <img
+                alt="pic" className={styles.pic} src={item.src}
+              />
+              <h1 className={styles.text}>
+                <span>{item.position}</span>
+                <div
+                  style={{ fontSize: '20px' }}
+                >
+                  {item.description}
+                </div>
+              </h1>
+              <h2 className={styles.list}>
+                {item.number}
+              </h2>
+            </div>
           </div>
         ))
         }
