@@ -8,9 +8,10 @@ import { connect } from 'dva';
 import { Link } from 'react-router-dom';
 import { ContainerQuery } from 'react-container-query';
 import classnames from 'classnames';
+import Footer from '../components/footer/footer';
 import styles from './write.less';
 
-const { Header, Footer, Content } = Layout;
+const { Header, Content } = Layout;
 const Search = Input.Search;
 const menu = (
 
@@ -89,7 +90,7 @@ class Write extends React.Component {
           </div>
         </Header>
         <Layout>
-          <Content style={{ background: '#F5F5F5', minHeight: 700, height: '700px', width: '100%', flexDirection: 'column' }}>
+          <Content style={{ background: '#F5F5F5', minHeight: 700, height: '800px', width: '100%', flexDirection: 'column' }}>
             <div className={styles.text} style={{ display: 'flex', flexDirection: 'column' }}>
               <h1 className={styles.size}>给游记起个名字</h1>
               <Input className={styles.border} onChange={e => this.setState({ content: e.target.value })} type="text" maxLength="16" />
@@ -100,23 +101,8 @@ class Write extends React.Component {
               </Button>
             </div>
           </Content>
+          <Footer />
         </Layout>
-        <Footer style={{ background: 'white', height: '60px' }}>
-          <div className={styles.layout}>
-            <h4>手机应用</h4>
-            <h4 >|</h4>
-            <h4 >口袋攻略</h4>
-            <h4 >|</h4>
-            <h4>意见反馈</h4>
-            <h4>|</h4>
-            <h4>联系我们</h4>
-            <h4>|</h4>
-            <h4 style={{ paddingRight: '350px' }}>使用条款</h4>
-          </div>
-          <div>
-            <h2 className={styles.h5}>蝉游记  沪ICP备1号文案</h2>
-          </div>
-        </Footer>
       </Layout>
     );
 

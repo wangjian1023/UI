@@ -21,6 +21,7 @@
     "react-container-query": "^0.9.1",
     "react-dom": "^15.4.0",
     "react-fittext": "^1.0.0",
+    "semantic-ui": "^2.2.13",
     "semantic-ui-css": "^2.2.12",
     "semantic-ui-react": "^0.77.2"
   },

@@ -9,11 +9,12 @@ import { Link, Switch, Route } from 'react-router-dom';
 import { connect } from 'dva';
 import { ContainerQuery } from 'react-container-query';
 import classnames from 'classnames';
+import Footer from '../components/footer/footer';
 import view from '../routes/view';
 import book from '../routes/book';
 import styles from './BasicLayout.less';
 
-const { Header, Footer, Content } = Layout;
+const { Header, Content } = Layout;
 const Search = Input.Search;
 const menu = (
   <Menu>
@@ -160,24 +161,7 @@ class BasicLayout extends React.Component {
             <Route path="/" component={this.state.current === 'mail' ? view : this.state.current === 'app' ? book : null} />
           </Switch>
         </Content>
-        <Footer style={{ background: 'white', height: '80px', display: 'flex' }}>
-          <div
-            className={styles.layout}
-          >
-            <h4>手机应用</h4>
-            <h4 >|</h4>
-            <h4 >口袋攻略</h4>
-            <h4 >|</h4>
-            <h4>意见反馈</h4>
-            <h4>|</h4>
-            <h4>联系我们</h4>
-            <h4>|</h4>
-            <h4 style={{ paddingRight: '350px' }}>使用条款</h4>
-          </div>
-          <div>
-            <h1 className={styles.h5}>蝉游记  沪ICP备1号文案</h1>
-          </div>
-        </Footer>
+        <Footer />
       </Layout>
 
     );

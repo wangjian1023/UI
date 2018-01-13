@@ -8,9 +8,10 @@ import { connect } from 'dva';
 import { Link } from 'react-router-dom';
 import { ContainerQuery } from 'react-container-query';
 import classnames from 'classnames';
+import Footer from '../components/footer/footer';
 import styles from './compile.less';
 
-const { Header, Footer, Content } = Layout;
+const { Header, Content } = Layout;
 const Search = Input.Search;
 
 const menu = (
@@ -149,22 +150,7 @@ class App extends React.Component {
             <h1 className={styles.list}>1</h1>
           </div>
         </Layout>
-        <Footer style={{ background: 'white', height: '80px' }}>
-          <div className={styles.layout}>
-            <h1>手机应用</h1>
-            <h1 >|</h1>
-            <h1 >口袋攻略</h1>
-            <h1 >|</h1>
-            <h1>意见反馈</h1>
-            <h1>|</h1>
-            <h1>联系我们</h1>
-            <h1>|</h1>
-            <h1 style={{ paddingRight: '350px' }}>使用条款</h1>
-          </div>
-          <div>
-            <h2 className={styles.h2}>蝉游记  沪ICP备1号文案</h2>
-          </div>
-        </Footer>
+        <Footer />
       </Layout>
     );
     return (

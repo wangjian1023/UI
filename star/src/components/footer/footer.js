@@ -8,7 +8,7 @@ import styles from './footer.less';
 class Footer extends React.Component {
   render() {
     return (
-      <Footer style={{ textAlign: 'center' }} className={styles.layout}>
+      <div className={styles.layout}>
         <span>手机应用</span>
         <span>|</span>
         <span>口袋攻略</span>
@@ -17,11 +17,11 @@ class Footer extends React.Component {
         <span>|</span>
         <span>联系我们</span>
         <span>|</span>
-        <span style={{ paddingRight: '500px' }}>使用条款</span>
+        <span style={{ paddingRight: '600px' }}>使用条款</span>
         <div>
           <span className={styles.h5}>蝉游记  沪ICP备1号文案</span>
         </div>
-      </Footer>
+      </div>
     );
   }
 }
