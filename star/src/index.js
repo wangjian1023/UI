@@ -10,6 +10,8 @@ const app = dva();
 
 // 3. Model
 app.model(require('./models/page'));
+app.model(require('./models/month'));
+app.model(require('./models/outwardjourney'));
 
 // 4. Router
 app.router(require('./router'));

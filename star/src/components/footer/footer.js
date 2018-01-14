@@ -17,7 +17,7 @@ class Footer extends React.Component {
         <span>|</span>
         <span>联系我们</span>
         <span>|</span>
-        <span style={{ paddingRight: '600px' }}>使用条款</span>
+        <span style={{ paddingRight: '700px' }}>使用条款</span>
         <div>
           <span className={styles.h5}>蝉游记  沪ICP备1号文案</span>
         </div>

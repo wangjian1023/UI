@@ -37,11 +37,11 @@ class BasicLayout extends React.Component {
       <div>
         <Layout className={styles.contents}>
           <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-            <Button className={styles.filter} type="primary">精选游记</Button>
+            <Button className={styles.filter} type="primary">国外-亚洲</Button>
             <Button className={styles.filter} >国外-欧洲</Button>
             <Button className={styles.filter} >国外-其他</Button>
-            <Button className={styles.filter} >国外-港澳台</Button>
-            <Button className={styles.filter} style={{ }}>国外-大陆</Button>
+            <Button className={styles.filter} >国内-港澳台</Button>
+            <Button className={styles.filter} style={{ }}>国内-大陆</Button>
           </div>
         </Layout>
         <Page />
