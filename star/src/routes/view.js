@@ -28,7 +28,7 @@ const query = {
 };
 
 const menu = months => (
-  <Menu style={{ width: '700px', height: '200px', display: 'flex', flexWrap: 'wrap', overflowY: 'scroll', positin: 'relative', right: '200px' }}>
+  <Menu className={styles.rapid}>
     {months.map((month, index) => {
       return (<Menu.Item key={index} >
         <a target="_blank" rel="noopener noreferrer" href=""><span className={styles.month}>{month.month}</span></a>
@@ -38,7 +38,7 @@ const menu = months => (
 );
 
 const menu1 = Outwards => (
-  <Menu style={{ width: '700px', height: '400px', display: 'flex', flexWrap: 'wrap', overflowY: 'scroll', positin: 'relative', right: '200px' }}>
+  <Menu className={styles.rapid} style={{ right: '350px', height: '300px' }}>
     {Outwards.map((outward, index) => {
       return (<Menu.Item key={index} >
         <a target="_blank" rel="noopener noreferrer" href=""><span className={styles.month}>{outward.month}</span></a>
@@ -46,22 +46,21 @@ const menu1 = Outwards => (
     })}
   </Menu>
 );
-const menu2 = months => (
-  <Menu style={{ width: '700px', height: '200px', display: 'flex', flexWrap: 'wrap', overflowY: 'scroll', positin: 'relative', right: '200px' }}>
-    {months.map((month, index) => {
+const menu2 = archstics => (
+  <Menu className={styles.rapid} style={{ left: '50px', height: '300px' }}>
+    {archstics.map((archstic, index) => {
       return (<Menu.Item key={index} >
-        <a target="_blank" rel="noopener noreferrer" href=""><span className={styles.month}>{month.month}</span></a>
+        <a target="_blank" rel="noopener noreferrer" href=""><span className={styles.month}>{archstic.month}</span></a>
       </Menu.Item>);
     })}
   </Menu>
 );
-
 class View extends React.Component {
   state = {
     card: [{ pic: 'http://p.chanyouji.cn/582490/1468260328216p1andi510ihgkc2f5hk6rf198.jpg?imageView2/1/w/480/h/288', avater: 'http://tva2.sinaimg.cn/crop.0.12.282.282.50/5c5ee839gw1ec7kq4pasrj207v08d3zv.jpg', word: '单车自驾：魔幻张家界', time: '2016年4月5日', day: ' 4天', paper: '128图' }, { pic: 'http://p.chanyouji.cn/666746/1485787660939p1b7ntf07u16kdssn1tfl1ck1q1qd.jpg?imageView2/1/w/480/h/288/288', avater: 'http://a.chanyouji.cn/469471/1460020629.jpg', word: '【斯里兰卡10天】跨过山和大海', time: '2016年4月5日', day: ' 10天', paper: '122图' }],
   }
   render() {
-    const { allMonth, Outward } = this.props;
+    const { allMonth, Outward, allarchstic } = this.props;
     const layout = (
       <div>
         <Layout className={styles.contents}>
@@ -73,7 +72,7 @@ class View extends React.Component {
             <Dropdown overlay={menu1(Outward)}>
               <Button className={styles.filter}>国外旅行地<Icon type="down" /> </Button>
             </Dropdown>
-            <Dropdown overlay={menu2}>
+            <Dropdown overlay={menu2(allarchstic)}>
               <Button className={styles.filter}>国内旅行地<Icon type="down" /> </Button>
             </Dropdown>
           </div>
@@ -134,4 +133,5 @@ class View extends React.Component {
 export default connect(state => ({
   allMonth: state.month.allMonth,
   Outward: state.outwardjourney.Outward,
+  allarchstic: state.archstic.archstic,
 }))(View);
