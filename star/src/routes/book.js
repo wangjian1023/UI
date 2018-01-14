@@ -2,7 +2,7 @@
  *  2017-01-12  Wang Jian
  */
 
-import { Layout, Button } from 'antd';
+import { Tabs } from 'antd';
 import React from 'react';
 import { connect } from 'dva';
 import { ContainerQuery } from 'react-container-query';
@@ -10,6 +10,7 @@ import { ContainerQuery } from 'react-container-query';
 import classnames from 'classnames';
 import styles from './book.less';
 import Page from '../components/page/page';
+import Pic from '../components/page/pic';
 
 const query = {
   'screen-xs': {
@@ -31,20 +32,41 @@ const query = {
     minWidth: 1200,
   },
 };
+const TabPane = Tabs.TabPane;
+
+function callback(key) {
+  console.log(key);
+}
 class BasicLayout extends React.Component {
   render() {
     const layout = (
       <div>
-        <Layout className={styles.contents}>
+        {/* <Layout className={styles.contents}>
           <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
             <Button className={styles.filter} type="primary">国外-亚洲</Button>
             <Button className={styles.filter} >国外-欧洲</Button>
             <Button className={styles.filter} >国外-其他</Button>
             <Button className={styles.filter} >国内-港澳台</Button>
-            <Button className={styles.filter} style={{ }}>国内-大陆</Button>
+            <Button className={styles.filter} >国内-大陆</Button>
           </div>
-        </Layout>
-        <Page />
+        </Layout> */}
+        <Tabs defaultActiveKey="1" onChange={callback} className={styles.contents} styles={{ flex: '1' }}>
+          <TabPane tab="国外-亚洲" key="1" className={styles.filter}>
+            <Page />
+          </TabPane>
+          <TabPane tab="国外-欧洲" key="2" className={styles.filter}>
+            <Page />
+          </TabPane>
+          <TabPane tab="国外-其他" key="3" className={styles.filter}>
+            <Page />
+          </TabPane>
+          <TabPane tab="国内-港澳台" key="4" className={styles.filter}>
+            <Page />
+          </TabPane>
+          <TabPane tab="国内-大陆" key="5" className={styles.filter}>
+            <Pic />
+          </TabPane>
+        </Tabs>
       </div>
     );
 

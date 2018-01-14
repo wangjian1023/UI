@@ -13,7 +13,7 @@ app.model(require('./models/page'));
 app.model(require('./models/month'));
 app.model(require('./models/outwardjourney'));
 app.model(require('./models/archstic'));
-
+app.model(require('./models/land'));
 
 // 4. Router
 app.router(require('./router'));
