@@ -9,7 +9,6 @@ import styles from './pic.less';
 class Pic extends React.Component {
   render() {
     const { Land } = this.props;
-    console.log('qqqqqqqq', Land);
     return (
       <div className={styles.overall}>
         {

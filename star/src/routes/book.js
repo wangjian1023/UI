@@ -41,15 +41,6 @@ class BasicLayout extends React.Component {
   render() {
     const layout = (
       <div>
-        {/* <Layout className={styles.contents}>
-          <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-            <Button className={styles.filter} type="primary">国外-亚洲</Button>
-            <Button className={styles.filter} >国外-欧洲</Button>
-            <Button className={styles.filter} >国外-其他</Button>
-            <Button className={styles.filter} >国内-港澳台</Button>
-            <Button className={styles.filter} >国内-大陆</Button>
-          </div>
-        </Layout> */}
         <Tabs defaultActiveKey="1" onChange={callback} className={styles.contents} styles={{ flex: '1' }}>
           <TabPane tab="国外-亚洲" key="1" className={styles.filter}>
             <Page />
