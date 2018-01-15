@@ -89,18 +89,6 @@ class Write extends React.Component {
             </Dropdown>
           </div>
         </Header>
-        <Layout>
-          <Content style={{ background: '#F5F5F5', minHeight: 700, height: '800px', width: '100%', flexDirection: 'column' }}>
-            <div className={styles.text} style={{ display: 'flex', flexDirection: 'column' }}>
-              <h1 className={styles.size}>给游记起个名字</h1>
-              <Input className={styles.border} onChange={e => this.setState({ content: e.target.value })} type="text" maxLength="16" />
-              <Button className={styles.buttom} disabled={this.state.content === ''} id="button_id" type="primary" onClick={this.handleSubmit}>
-                <Icon />下一步
-              </Button>
-            </div>
-          </Content>
-          <Footer />
-        </Layout>
       </Layout>
     );
 
