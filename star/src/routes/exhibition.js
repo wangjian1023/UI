@@ -92,7 +92,10 @@ class Exhibition extends React.Component {
           </div>
         </Header>
         <connect>
-          <Rolling />
+          <div className={styles.tabs}>
+            <Rolling />
+          </div>
+
         </connect>
         <Footer />
       </Layout>

@@ -8,7 +8,7 @@ const BgElement = Element.BgElement;
 class Demo extends React.Component {
   render() {
     return (
-      <BannerAnim prefixCls="banner-user" autoPlay>
+      <BannerAnim prefixCls="banner-user" autoPlay style={{ height: '100px', width: '600px' }}>
         <Element
           prefixCls="banner-user-elem"
           key="0"
@@ -17,11 +17,10 @@ class Demo extends React.Component {
             key="bg"
             className="bg"
             style={{
-              background: '#364D79',
             }}
           />
           <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
-            <img src="http://m.chanyouji.cn/index-cover/27926-894425.jpg" alt="logo" style={{ height: '430px' }} />
+            <img src="http://m.chanyouji.cn/index-cover/27926-894425.jpg" alt="logo" />
           </TweenOne>
         </Element>
         <Element
@@ -32,11 +31,10 @@ class Demo extends React.Component {
             key="bg"
             className="bg"
             style={{
-              background: '#64CBCC',
             }}
           />
           <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
-            <img src="" alt="logo" style={{ height: '430px' }} />
+            <img src="http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/1/w/620/h/330/format/jpg" alt="logo" style={{ width: '600px' }} />
           </TweenOne>
         </Element>
       </BannerAnim>
