@@ -2,16 +2,18 @@
  *  2017-01-15  Wang Jian
  */
 
-import { Layout, Input, Button, Avatar, Menu, Dropdown, Icon } from 'antd';
+import { Layout, Input, Avatar, Menu, Dropdown } from 'antd';
 import React from 'react';
 import { connect } from 'dva';
 import { Link } from 'react-router-dom';
 import { ContainerQuery } from 'react-container-query';
 import classnames from 'classnames';
 import Footer from '../components/footer/footer';
+import Rolling from '../components/rolling/rolling';
 import styles from './write.less';
 
-const { Header, Content } = Layout;
+
+const { Header } = Layout;
 const Search = Input.Search;
 const menu = (
 
@@ -46,7 +48,7 @@ const query = {
     minWidth: 1200,
   },
 };
-class Write extends React.Component {
+class Exhibition extends React.Component {
   state = {
     current: 'mail',
     content: '',
@@ -89,6 +91,10 @@ class Write extends React.Component {
             </Dropdown>
           </div>
         </Header>
+        <connect>
+          <Rolling />
+        </connect>
+        <Footer />
       </Layout>
     );
 
@@ -99,4 +105,4 @@ class Write extends React.Component {
     );
   }
 }
-export default connect()(Write);
+export default connect()(Exhibition);

@@ -4,6 +4,7 @@
 
 import React from 'react';
 import { connect } from 'dva';
+import { Link } from 'dva/router';
 import styles from './page.less';
 
 class Page extends React.Component {
@@ -17,9 +18,11 @@ class Page extends React.Component {
             key={item.key}
           >
             <div style={{ position: 'relative' }}>
-              <img
-                alt="pic" className={styles.pic} src={item.src}
-              />
+              <Link to="/exhibition" >
+                <img
+                  alt="pic" className={styles.pic} src={item.src}
+                />
+              </Link>
               <h1 className={styles.text}>
                 <span>{item.position}</span>
                 <div

@@ -4,6 +4,7 @@
 
 import React from 'react';
 import { connect } from 'dva';
+import { Link } from 'react-router-dom';
 import styles from './pic.less';
 
 class Pic extends React.Component {
@@ -17,9 +18,11 @@ class Pic extends React.Component {
             key={item.key}
           >
             <div style={{ position: 'relative' }}>
-              <img
-                alt="pic" className={styles.pic} src={item.src}
-              />
+              <Link to="/exhibition" >
+                <img
+                  alt="pic" className={styles.pic} src={item.src}
+                />
+              </Link>
               <h1 className={styles.text}>
                 <span>{item.position}</span>
                 <div
