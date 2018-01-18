@@ -14,6 +14,8 @@ app.model(require('./models/month'));
 app.model(require('./models/outwardjourney'));
 app.model(require('./models/archstic'));
 app.model(require('./models/land'));
+app.model(require('./models/macao'));
+app.model(require('./models/others'));
 
 // 4. Router
 app.router(require('./router'));
