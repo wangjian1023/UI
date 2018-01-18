@@ -5,7 +5,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
-import styles from './page.less';
+import styles from './others.less';
 
 class Others extends React.Component {
   render() {
