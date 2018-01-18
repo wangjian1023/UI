@@ -11,6 +11,8 @@ import classnames from 'classnames';
 import styles from './book.less';
 import Page from '../components/page/page';
 import Pic from '../components/page/pic';
+import Others from '../components/page/others';
+import Macao from '../components/page/macao';
 
 const query = {
   'screen-xs': {
@@ -49,10 +51,10 @@ class BasicLayout extends React.Component {
             <Page />
           </TabPane>
           <TabPane tab="国外-其他" key="3" className={styles.filter}>
-            <Page />
+            <Others />
           </TabPane>
           <TabPane tab="国内-港澳台" key="4" className={styles.filter}>
-            <Page />
+            <Macao />
           </TabPane>
           <TabPane tab="国内-大陆" key="5" className={styles.filter}>
             <Pic />

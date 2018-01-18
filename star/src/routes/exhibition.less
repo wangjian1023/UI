@@ -54,8 +54,52 @@
 }
 .tabs {
   display: flex;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  background: #F8F8F8;
+  border-bottom: 0.1px solid gray;
+}
+.contents {
   margin: 0 auto;
-  height: 200px;
-  margin-left: 500px;
-  width: 1440px;
+  text-align: center;
+  position: relative;
+  font-size: 40px;
+}
+.filter{
+  text-align: center;
+  display: inline-block;
+  font-size: 40px;
+  color: #555;
+  vertical-align: top;
+  line-height: 40px;
+  a:hover{
+    background: black;
+  }
+}
+.hidder {
+  visibility: hidden;
+}
+
+.pic {
+  display: flex;
+  img{
+    position: relative;
+    z-index: -1;
+  }
+}
+.word {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 200px;
+  top: 265px;
+  text-align: center;
+  opacity: 1;
+  z-index: 4;
+}
+.text {
+  margin-top: 35px;
+  text-align: center;
 }

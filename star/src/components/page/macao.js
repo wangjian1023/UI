@@ -1,5 +1,5 @@
 /**
- * 2018-01-12   Wang Jian
+ * 2018-01-18   Wang Jian
  */
 
 import React from 'react';
@@ -7,13 +7,13 @@ import { connect } from 'dva';
 import { Link } from 'dva/router';
 import styles from './page.less';
 
-class Page extends React.Component {
+class Macao extends React.Component {
   render() {
-    const { allScenic } = this.props;
+    const { allMacao } = this.props;
     return (
       <div className={styles.overall}>
         {
-        allScenic.map(item => (
+        allMacao.map(item => (
           <div
             key={item.key}
           >
@@ -44,5 +44,5 @@ class Page extends React.Component {
 }
 
 export default connect(state => ({
-  allScenic: state.page.allScenic,
-}))(Page);
+  allMacao: state.macao.allMacao,
+}))(Macao);
