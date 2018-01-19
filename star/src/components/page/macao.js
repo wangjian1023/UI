@@ -10,7 +10,7 @@ import styles from './macao.less';
 class Macao extends React.Component {
   render() {
     const { allMacao } = this.props;
-    console.log (allMacao, '11111');
+    // console.log (allMacao, '11111');
     return (
       <div className={styles.overall}>
         {

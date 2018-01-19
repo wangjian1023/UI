@@ -16,8 +16,6 @@ class Demo extends React.Component {
           <BgElement
             key="bg"
             className="bg"
-            style={{
-            }}
           />
           <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
             <img src="http://m.chanyouji.cn/index-cover/27926-894425.jpg" alt="logo" />
@@ -30,8 +28,6 @@ class Demo extends React.Component {
           <BgElement
             key="bg"
             className="bg"
-            style={{
-            }}
           />
           <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
             <img src="http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/1/w/620/h/330/format/jpg" alt="logo" style={{ width: '900px' }} />

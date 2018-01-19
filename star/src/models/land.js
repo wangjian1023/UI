@@ -36,13 +36,6 @@ export default {
         description: 'Beijing',
         number: '旅行地248',
       },
-      // {
-      //   key: 'index[4]',
-      //   src: 'http://m.chanyouji.cn/tips/152-portrait.jpg',
-      //   position: '杭州',
-      //   description: 'Sichuan',
-      //   number: '旅行地120',
-      // },
     ],
   },
 

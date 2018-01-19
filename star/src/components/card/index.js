@@ -66,6 +66,40 @@ class card extends React.Component {
           </Col>
         </Row>
       </div>
+      <Row gutter={14}>
+        <Col span={3} className={styles.hidder}>
+          <div>same</div>
+        </Col>
+        <Col span={9}>
+          <div>
+            <Card
+              style={{ width: '500px', height: '430px' }}
+              cover={<img alt="example" className={styles.pic} src="http://p.chanyouji.cn/2044/1346846963700p176b5au22rn1t461j8n113i1h7c7.jpg?imageView2/1/w/480/h/288" />}
+            >
+              <div className={styles.text} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+                <h3>曼谷速览</h3>
+                <p>初行曼谷必读的旅行手册</p>
+              </div>
+            </Card>
+          </div>
+        </Col>
+        <Col span={9}>
+          <div>
+            <Card
+              style={{ width: '500px', height: '430px' }}
+              cover={<img alt="example" className={styles.pic} src="http://p.chanyouji.cn/69032/1379066010153p184bbesq010gjro68l11koukl62a.jpg?imageView2/1/w/480/h/288" />}
+            >
+              <div className={styles.text} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+                <h3>曼谷夜市地图</h3>
+                <p>品味曼谷：迷失于热闹夜市之中</p>
+              </div>
+            </Card>
+          </div>
+        </Col>
+        <Col span={3} className={styles.hidder}>
+          <div>same</div>
+        </Col>
+      </Row>
     );
 
     return (
