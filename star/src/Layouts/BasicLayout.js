@@ -5,7 +5,6 @@
 import { Layout, Input, Avatar, Dropdown, Menu, Carousel, Icon } from 'antd';
 import React from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
-// import HeaderSearch from 'ant-design-pro/lib/HeaderSearch';
 import { connect } from 'dva';
 import { ContainerQuery } from 'react-container-query';
 import classnames from 'classnames';

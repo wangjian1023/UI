@@ -13,6 +13,7 @@ export default {
         position: '上海',
         description: 'Shang Hai',
         number: '旅行地199',
+        page: [{ src: 'http://m.chanyouji.cn/tips/25-portrait.jpg' }, {}],
       },
       {
         key: 'index[1]',
