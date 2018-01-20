@@ -95,7 +95,9 @@ class Exhibition extends React.Component {
 
         <connect>
           <div style={{ display: 'flex', justifyContent: 'center', height: '110px', alignItems: 'center' }}>
-            <Rolling />
+            <Link to="/exhibition/found">
+              <Rolling />
+            </Link>
           </div>
           <Layout className={styles.contents}>
             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
