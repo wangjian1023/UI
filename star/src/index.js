@@ -16,6 +16,8 @@ app.model(require('./models/archstic'));
 app.model(require('./models/land'));
 app.model(require('./models/macao'));
 app.model(require('./models/others'));
+app.model(require('./models/subject'));
+
 
 // 4. Router
 app.router(require('./router'));
