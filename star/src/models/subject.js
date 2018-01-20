@@ -6,15 +6,50 @@ export default {
   namespace: 'subject',
 
   state: {
-    Subject: [{
-      src: [
-        'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
-        'http://m.chanyouji.cn/destinations/165-landscape.jpg?imageView2/2/w/160/h/96',
-        'http://m.chanyouji.cn/destinations/165-landscape.jpg?imageView2/2/w/160/h/96',
-        'http://m.chanyouji.cn/destinations/165-landscape.jpg?imageView2/2/w/160/h/96',
-        'http://m.chanyouji.cn/destinations/165-landscape.jpg?imageView2/2/w/160/h/96',
-      ],
-    }],
+    Subject: [
+      {
+        key: 'index[0]',
+        src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+      },
+      {
+        key: 'index[1]',
+        src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+      },
+      {
+        key: 'index[2]',
+        src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+      },
+      {
+        key: 'index[3]',
+        src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+      },
+      {
+        key: 'index[5]',
+        src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+      },
+    ],
+    Subject1: [
+      {
+        key: 'index[0]',
+        src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+      },
+      {
+        key: 'index[1]',
+        src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+      },
+      {
+        key: 'index[2]',
+        src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+      },
+      {
+        key: 'index[3]',
+        src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+      },
+      {
+        key: 'index[5]',
+        src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+      },
+    ],
   },
 
   effects: {
@@ -32,6 +67,23 @@ export default {
         ...state,
         Subject: action.payload,
       };
+    },
+    effects: {
+      *showSubject1({ payload }, { put }) {
+        yield put({
+          type: 'Subject1',
+          payload: this.state.Subject1,
+        });
+      },
+    },
+
+    reducers: {
+      Subject1(state, action) {
+        return {
+          ...state,
+          Subject1: action.payload,
+        };
+      },
     },
   },
 };

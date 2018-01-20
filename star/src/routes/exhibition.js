@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { ContainerQuery } from 'react-container-query';
 import classnames from 'classnames';
 import Footer from '../components/footer/footer';
-// import Rolling from '../components/rolling/rolling';
+import Rolling from '../components/rolling/rolling';
 import styles from './exhibition.less';
 
 
@@ -94,11 +94,9 @@ class Exhibition extends React.Component {
         </Header>
 
         <connect>
-          {/* <div style={{ display: 'flex', justifyContent: 'center', height: '110px', alignItems: 'center' }}>
-            <Link to="/exhibition/found">
-              <Rolling />
-            </Link>
-          </div> */}
+          <Link to="/exhibition/found">
+            <Rolling />
+          </Link>
           <Layout className={styles.contents}>
             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
               <Button className={styles.filter} type="primary">专题</Button>

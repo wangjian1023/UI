@@ -1,41 +1,38 @@
+/**
+ * 2018-01-12   Wang Jian
+ */
+
 import React from 'react';
 import { connect } from 'dva';
-import BannerAnim, { Element } from 'rc-banner-anim';
-import TweenOne from 'rc-tween-one';
-// import 'rc-banner-anim/assets/index.css';
+// import { Link } from 'dva/router';
+import styles from './rolling.less';
 
-const BgElement = Element.BgElement;
-class Demo extends React.Component {
+class Page extends React.Component {
   render() {
-    const { subject } = this.props;
-    // const { Subject } = subject;
-    console.log(subject, 'xxxxx');
+    const { Subject } = this.props;
+    console.log(Subject, '1111');
     return (
-      <div>
+      <div className={styles.overall}>
         {
-        subject.Subject.map(item => (
-          <div key={item.key}>
-            <BannerAnim prefixCls="banner-user" autoPlay style={{ width: '900px', height: '80px' }}>
-              <Element
-                prefixCls="banner-user-elem"
-                key="0"
-              >
-                <BgElement
-                  key="bg"
-                  className="bg"
-                />
-                <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
-                  <img src={item.src} alt="logo" style={{ width: '900px' }} />
-                </TweenOne>
-              </Element>
-            </BannerAnim>
+        Subject.map(item => (
+          <div
+            key={item.key}
+          >
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <img
+                alt="pic" className={styles.pic} src={item.src}
+              />
+              <span className={styles.list}>
+                关西
+              </span>
+            </div>
           </div>
         ))
-      }
+        }
       </div>
     );
   }
 }
 export default connect(state => ({
-  subject: state.subject,
-}))(Demo);
+  Subject: state.subject.Subject,
+}))(Page);
