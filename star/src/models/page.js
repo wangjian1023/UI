@@ -13,6 +13,33 @@
           position: '日本',
           description: 'Japan',
           number: '旅行地1010',
+          Subject: [
+            {
+              key: 'index[0]',
+              src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+              text: '关西',
+            },
+            {
+              key: 'index[1]',
+              src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+              text: '关西',
+            },
+            {
+              key: 'index[2]',
+              src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+              text: '关西',
+            },
+            {
+              key: 'index[3]',
+              src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+              text: '关西',
+            },
+            {
+              key: 'index[5]',
+              src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+              text: '关西',
+            },
+          ],
         },
         {
           key: 'index[1]',

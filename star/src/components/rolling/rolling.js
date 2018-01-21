@@ -9,21 +9,21 @@ import styles from './rolling.less';
 
 class Page extends React.Component {
   render() {
-    const { Subject } = this.props;
-    console.log(Subject, '1111');
+    const { allScenic } = this.props;
+    console.log(allScenic, '1111');
     return (
       <div className={styles.overall}>
         {
-        Subject.map(item => (
+        allScenic.map(item => (
           <div
-            key={item.key}
+            key={allScenic.Subject.key}
           >
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
               <img
-                alt="pic" className={styles.pic} src={item.src}
+                alt="pic" className={styles.pic} src={allScenic.Subject.src}
               />
               <span className={styles.list}>
-                关西
+                {item.text}
               </span>
             </div>
           </div>
@@ -34,5 +34,5 @@ class Page extends React.Component {
   }
 }
 export default connect(state => ({
-  Subject: state.subject.Subject,
+  allScenic: state.page.allScenic,
 }))(Page);

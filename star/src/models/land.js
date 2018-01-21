@@ -13,7 +13,33 @@ export default {
         position: '上海',
         description: 'Shang Hai',
         number: '旅行地199',
-        page: [{ src: 'http://m.chanyouji.cn/tips/25-portrait.jpg' }, {}],
+        Subject: [
+          {
+            key: 'index[0]',
+            src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+            text: '关西',
+          },
+          {
+            key: 'index[1]',
+            src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+            text: '关西',
+          },
+          {
+            key: 'index[2]',
+            src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+            text: '关西',
+          },
+          {
+            key: 'index[3]',
+            src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+            text: '关西',
+          },
+          {
+            key: 'index[5]',
+            src: 'http://m.chanyouji.cn/destinations/167-landscape.jpg?imageView2/2/w/160/h/96',
+            text: '关西',
+          },
+        ],
       },
       {
         key: 'index[1]',
