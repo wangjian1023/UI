@@ -8,7 +8,7 @@
     state: {
       allScenic: [
         {
-          key: 'index[0]',
+          keyid: 'index[0]',
           src: 'http://m.chanyouji.cn/destinations/55-portrait.jpg',
           position: '日本',
           description: 'Japan',

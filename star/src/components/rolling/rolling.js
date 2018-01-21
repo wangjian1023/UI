@@ -14,13 +14,13 @@ class Page extends React.Component {
     return (
       <div className={styles.overall}>
         {
-        allScenic.map(item => (
+        allScenic.keyid.Subject.map(item => (
           <div
-            key={allScenic.Subject.key}
+            key={item.key}
           >
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
               <img
-                alt="pic" className={styles.pic} src={allScenic.Subject.src}
+                alt="pic" className={styles.pic} src={item.src}
               />
               <span className={styles.list}>
                 {item.text}
